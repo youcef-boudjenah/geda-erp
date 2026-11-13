@@ -15,3 +15,4 @@ Site web officiel de présentation, tarification et téléchargement de **GEDA E
 * **Catalogue des 16 Modules & Tarifs officiels**
 * **Guide pas-à-pas d'installation & d'activation (Node-Locked HWID)**
 * **Cartes de contact direct (Téléphone, WhatsApp, Email, LinkedIn, Facebook)**
+

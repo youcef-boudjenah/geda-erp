@@ -304,6 +304,103 @@ code {
     gap: 8px;
 }
 
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: 1px solid var(--hairline);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.15s ease;
+}
+
+.mobile-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: var(--primary-text);
+    border-radius: 1px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobile-toggle.is-active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-toggle.is-active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.mobile-drawer {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 8px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+    pointer-events: auto;
+}
+
+.mobile-drawer.is-open {
+    display: block;
+    animation: drawerDrop 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes drawerDrop {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.mobile-nav-item {
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--primary-text);
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--alternate-ground);
+    border-radius: 6px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.mobile-nav-item:hover {
+    background-color: var(--surface);
+    color: var(--accent);
+}
+
+.mobile-drawer-cta .button {
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-table-hint {
+    display: none;
+}
+
 /* ==========================================================================
    3. HERO SECTION
    ========================================================================== */
@@ -743,13 +840,18 @@ code {
     background-color: var(--surface);
 }
 
+.search-input-wrap {
+    width: 100%;
+    max-width: 380px;
+}
+
 .search-input-wrap input {
     font-family: var(--font-main);
     font-size: 0.88rem;
     padding: 8px 16px;
     border: 1px solid var(--hairline);
     border-radius: var(--control-corner);
-    width: 380px;
+    width: 100%;
     outline: none;
     background-color: #ffffff;
 }
@@ -1096,7 +1198,12 @@ code {
     color: var(--primary-text);
 }
 
-/* --- Responsive Breakpoints --- */
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (Mobile, Tablet, Desktop)
+   Zero horizontal overflow, finger-friendly touch targets, fluid typography
+   ========================================================================== */
+
+/* --- Tablet / Intermediate Screens (1024px) --- */
 @media (max-width: 1024px) {
     .logo-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1121,42 +1228,489 @@ code {
     }
 }
 
+/* --- Mobile Landscape & Standard Mobile (768px) --- */
 @media (max-width: 768px) {
     :root {
-        --band-padding-top: 64px;
-        --band-padding-bottom: 48px;
+        --band-padding-top: 56px;
+        --band-padding-bottom: 40px;
     }
 
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .section-lead {
+        margin-bottom: 32px;
+    }
+
+    .section-title {
+        font-size: clamp(1.75rem, 6.5vw, 2.25rem);
+        line-height: 1.18;
+    }
+
+    .section-desc {
+        font-size: 0.96rem;
+    }
+
+    /* 1. Announcement */
     .announcement-bar {
-        display: none;
+        font-size: 0.76rem;
+        padding: 8px 0;
+    }
+
+    .announcement-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4px;
+    }
+
+    .announcement-text {
+        font-size: 0.74rem;
+        line-height: 1.35;
+    }
+
+    .announcement-link {
+        font-size: 0.75rem;
+    }
+
+    /* 2. Header & Mobile Navigation */
+    .header-wrap {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .header-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .header-inset {
+        height: 50px;
+        padding: 0 12px;
+    }
+
+    .brand-logo {
+        height: 24px;
+    }
+
+    .brand-name {
+        font-size: 0.94rem;
     }
 
     .header-nav {
         display: none;
     }
 
+    .header-demo-btn {
+        display: none;
+    }
+
+    .header-download-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .btn-version {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    /* 3. Hero Section */
+    .hero-section {
+        padding-top: 20px;
+        padding-bottom: 44px;
+    }
+
+    .hero-intro {
+        margin-bottom: 28px;
+    }
+
     .hero-title {
-        font-size: 2.2rem;
+        font-size: clamp(1.9rem, 7.5vw, 2.45rem);
+        line-height: 1.15;
+        letter-spacing: -0.025em;
+        margin-bottom: 14px;
+        word-break: break-word;
     }
 
     .hero-body {
+        font-size: 1rem;
+        line-height: 1.55;
+        margin-bottom: 22px;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .hero-cta-group .button {
+        width: 100%;
+        min-height: 48px;
+        padding: 14px 20px;
+        text-align: center;
+        justify-content: center;
+        font-size: 0.94rem;
+    }
+
+    .hero-trust {
+        font-size: 0.76rem;
+        text-align: center;
+        line-height: 1.45;
+    }
+
+    /* Hero Device Frame */
+    .frame-bar {
+        height: 32px;
+        padding: 0 10px;
+    }
+
+    .frame-status {
+        display: none;
+    }
+
+    .frame-title {
+        font-size: 0.65rem;
+        max-width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* 4. Logo Cloud (2 Columns for tight balanced grid) */
+    .grid-caption {
+        font-size: 0.74rem;
+        margin-bottom: 16px;
+        line-height: 1.4;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-cell {
+        padding: 16px 12px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .logo-code {
         font-size: 1.05rem;
+    }
+
+    .logo-label {
+        font-size: 0.72rem;
+    }
+
+    /* 5. Gallery (Single column with clear full-bleed photos) */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gallery-card-body {
+        padding: 20px 16px;
+    }
+
+    .card-title {
+        font-size: 1.15rem;
+    }
+
+    .card-desc {
+        font-size: 0.88rem;
+    }
+
+    /* 6. Process (Vertical stepped timeline) */
+    .process-track {
+        grid-template-columns: 1fr;
+    }
+
+    .process-node {
+        padding: 20px 16px;
+    }
+
+    .node-num {
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+    }
+
+    .node-title {
+        font-size: 1.02rem;
+        margin-bottom: 4px;
+    }
+
+    .node-desc {
+        font-size: 0.85rem;
+    }
+
+    /* 7. Team (Vertical cards) */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .team-card {
+        padding: 24px 16px;
+    }
+
+    /* 8. Pricing & 16 Modules Table */
+    .plans-list {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .plan-row {
+        grid-template-columns: 1fr;
+        padding: 20px 16px;
+        gap: 14px;
+    }
+
+    .plan-title {
+        font-size: 1.25rem;
+    }
+
+    .plan-price {
+        font-size: 1.5rem;
+    }
+
+    .price-highlight {
+        font-size: 1.8rem;
+    }
+
+    .plan-cta .button {
+        width: 100%;
+        min-height: 46px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Modules Table Scroller */
+    .table-header-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px 14px;
+    }
+
+    .search-input-wrap {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .search-input-wrap input {
+        width: 100%;
+        font-size: 0.84rem;
+        padding: 10px 14px;
+    }
+
+    .table-counter {
+        text-align: right;
+        font-size: 0.75rem;
+    }
+
+    .mobile-table-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        background-color: #f0f4ff;
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        border-bottom: 1px solid var(--hairline);
+        text-align: center;
+    }
+
+    .table-scroller {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    .modules-table {
+        min-width: 620px;
+        font-size: 0.82rem;
+    }
+
+    .modules-table th, .modules-table td {
+        padding: 10px 12px;
+    }
+
+    .th-val, .td-strike, .td-offer, .td-included {
+        width: 120px;
+    }
+
+    .th-discount, .td-badge, .td-free {
+        width: 75px;
+    }
+
+    /* 9. FAQ */
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .faq-q {
+        font-size: 1.05rem;
+    }
+
+    .faq-a {
+        font-size: 0.88rem;
+    }
+
+    /* 10. Closing Banner */
+    .closing-banner {
+        padding: 56px 0;
+    }
+
+    .closing-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        text-align: left;
+    }
+
+    .closing-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .closing-desc {
+        font-size: 0.95rem;
+    }
+
+    .closing-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .closing-actions .button {
+        width: 100%;
+        min-height: 48px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* 11. Editorial Contact Cards */
+    .contact-cards-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .editorial-card {
+        padding: 24px 18px;
+        border-radius: 12px;
+    }
+
+    .card-head {
+        margin-bottom: 18px;
+    }
+
+    .card-firm {
+        font-size: 1.8rem;
+    }
+
+    .card-person {
+        font-size: 2rem;
+    }
+
+    .card-role {
+        font-size: 0.88rem;
+    }
+
+    .table-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 10px 0;
+    }
+
+    .row-tag {
+        width: 100%;
+        font-size: 0.68rem;
+    }
+
+    .row-data {
+        text-align: left;
+        width: 100%;
+        font-size: 0.95rem;
+        word-break: break-word;
+    }
+
+    .phone-data {
+        font-size: 1.15rem;
+    }
+
+    /* 12. Footer */
+    .site-footer {
+        padding: 48px 0 36px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+/* --- Narrow Mobile Screens (iPhone SE, Small Android <= 480px) --- */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .header-inset {
+        height: 48px;
+        padding: 0 10px;
+    }
+
+    .brand-name {
+        font-size: 0.88rem;
+    }
+
+    .hero-title {
+        font-size: 1.78rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .section-desc {
+        font-size: 0.9rem;
+    }
+
+    .button-pill {
+        padding: 12px 18px;
+        font-size: 0.88rem;
     }
 
     .logo-grid {
         grid-template-columns: 1fr;
     }
 
-    .gallery-grid, .process-track, .team-grid, .faq-grid {
-        grid-template-columns: 1fr;
+    .logo-cell {
+        padding: 14px 10px;
     }
 
-    .closing-container {
-        flex-direction: column;
-        align-items: flex-start;
+    .editorial-card {
+        padding: 20px 14px;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
+    .card-firm, .card-person {
+        font-size: 1.6rem;
     }
 }

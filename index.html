@@ -45,7 +45,7 @@
 
     <!-- 2. Site Header: Brand, Navigation and Actions in a solid bar inset from the page edges -->
     <header class="header-wrap">
-        <div class="container">
+        <div class="container header-container">
             <div class="header-inset">
                 <a href="#top" class="brand" aria-label="Accueil GEDA ERP">
                     <img src="assets/img/geda-solution-logo.png" alt="GEDA Solution" class="brand-logo" onerror="this.src='assets/img/geda-mark.png'">
@@ -60,9 +60,30 @@
                 </nav>
 
                 <div class="header-actions">
-                    <a href="#demo" class="button button-ghost button-sm">Démonstration</a>
-                    <a href="assets/downloads/GEDA_ERP_v2.5_Setup.exe" class="button button-primary button-sm" download>
-                        Télécharger v2.5
+                    <a href="#demo" class="button button-ghost button-sm header-demo-btn">Démonstration</a>
+                    <a href="assets/downloads/GEDA_ERP_v2.5_Setup.exe" class="button button-primary button-sm header-download-btn" download>
+                        <span>Télécharger</span><span class="btn-version"> v2.5</span>
+                    </a>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu de navigation" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Drawer -->
+            <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+                <nav class="mobile-nav">
+                    <a href="#solution" class="mobile-nav-item">Solution & Modules</a>
+                    <a href="#processus" class="mobile-nav-item">Déploiement en 5 étapes</a>
+                    <a href="#tarifs" class="mobile-nav-item">Tarifs & Offre 16 Modules</a>
+                    <a href="#faq" class="mobile-nav-item">Questions Fréquentes</a>
+                    <a href="#contact" class="mobile-nav-item">Contact & Activation</a>
+                </nav>
+                <div class="mobile-drawer-cta">
+                    <a href="assets/downloads/GEDA_ERP_v2.5_Setup.exe" class="button button-primary button-pill" download>
+                        Télécharger le Setup Windows (85.6 Mo)
                     </a>
                 </div>
             </div>
@@ -382,6 +403,10 @@
                             <input type="search" id="moduleSearchInput" placeholder="Filtrer un module (ex: SCF, G50, Naftal, IRG, Camion, Stock...)" aria-label="Filtrer les modules">
                         </div>
                         <span class="table-counter" id="catalogCount">16 modules d'exploitation</span>
+                    </div>
+
+                    <div class="mobile-table-hint" aria-hidden="true">
+                        <span>← Faites défiler le tableau horizontalement pour voir les tarifs & remises →</span>
                     </div>
 
                     <div class="table-scroller">

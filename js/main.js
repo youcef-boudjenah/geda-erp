@@ -85,4 +85,42 @@ document.addEventListener('DOMContentLoaded', () => {
             video.classList.add('is-playing');
         });
     }
+
+    // ------------------------------------------------------------------------
+    // 4. Mobile Navigation Drawer Toggle
+    // ------------------------------------------------------------------------
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+
+    if (mobileToggle && mobileDrawer) {
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileDrawer.classList.toggle('is-open');
+            mobileToggle.classList.toggle('is-active', isOpen);
+            mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            mobileDrawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        });
+
+        // Close drawer when clicking any link inside it
+        mobileDrawer.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.remove('is-open');
+                mobileToggle.classList.remove('is-active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileDrawer.setAttribute('aria-hidden', 'true');
+            });
+        });
+
+        // Close drawer when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileDrawer.contains(e.target) && !mobileToggle.contains(e.target)) {
+                if (mobileDrawer.classList.contains('is-open')) {
+                    mobileDrawer.classList.remove('is-open');
+                    mobileToggle.classList.remove('is-active');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    mobileDrawer.setAttribute('aria-hidden', 'true');
+                }
+            }
+        });
+    }
 });

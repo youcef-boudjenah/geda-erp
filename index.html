@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GEDA ERP — Progiciel de Gestion Intégré modulaire haute performance pour les entreprises algériennes : Plan comptable SCF, Déclaration G50, Paie IRG, Cartes Naftal, Vente au Camion (Van Sales) et GPAO.">
+    <meta name="keywords" content="GEDA ERP, ERP Algérie, SCF Algérie, G50 Algérie, Paie IRG, Van Sales Algérie, GPAO Algérie, Youcef Boudjenah, GEDA Solution">
+    <meta name="author" content="Youcef Boudjenah — GEDA Solution">
+    <meta name="theme-color" content="#090D16">
+
+    <title>GEDA ERP Enterprise · Progiciel de Gestion Intégré pour l'Entreprise Algérienne</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+
+    <!-- Fonts: Plus Jakarta Sans & Playfair Display (pour les cartes éditoriales de contact) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header" id="top">
+        <div class="container header-container">
+            <a href="#top" class="brand-link" aria-label="Accueil GEDA ERP">
+                <img src="assets/img/geda-solution-logo.png" alt="Logo GEDA Solution" class="brand-logo" onerror="this.src='assets/img/geda-mark.png'">
+                <div class="brand-text">
+                    <span class="brand-name">GEDA ERP</span>
+                    <span class="brand-sub">Enterprise v2.5</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="#presentation" class="nav-link">Présentation</a></li>
+                    <li><a href="#modules" class="nav-link">16 Modules</a></li>
+                    <li><a href="#tarifs" class="nav-link">Offre & Tarifs</a></li>
+                    <li><a href="#demo" class="nav-link">Vidéo Démo</a></li>
+                    <li><a href="#installation" class="nav-link">Installation</a></li>
+                    <li><a href="#documentation" class="nav-link">Documents</a></li>
+                    <li><a href="#contact" class="nav-link">Contact & Activation</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#installation" class="btn btn-secondary btn-sm hide-mobile">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    <span>Télécharger</span>
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3H9z"/></svg>
+                    <span>Activer</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Progiciel de Gestion Intégré (ERP) · 100% Conforme Écosystème Algérien</span>
+                </div>
+
+                <h1 class="hero-title">
+                    L'ERP Modulaire conçu pour piloter toute votre entreprise algérienne
+                </h1>
+
+                <p class="hero-description">
+                    Plan comptable <strong>SCF</strong>, déclaration fiscale <strong>G50</strong>, paie avec barème <strong>IRG</strong>, 
+                    cartes <strong>Naftal</strong>, vente directe au camion (<strong>Van Sales</strong>) et gestion de production <strong>GPAO</strong>.
+                    Une suite souveraine, ultra-rapide et opérationnelle en réseau local ou poste autonome.
+                </p>
+
+                <!-- Value Props Pills -->
+                <div class="hero-props">
+                    <div class="prop-item">
+                        <svg class="prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Données souveraines chez vous (Hors-Ligne / Réseau Local)</span>
+                    </div>
+                    <div class="prop-item">
+                        <svg class="prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                        <span>16 Modules intégrés sans silos d'information</span>
+                    </div>
+                    <div class="prop-item">
+                        <svg class="prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        <span>Base SQLite autonome ou MySQL 8.0+ Haute Disponibilité</span>
+                    </div>
+                </div>
+
+                <!-- CTA Actions -->
+                <div class="hero-actions">
+                    <a href="assets/downloads/GEDA_ERP_v2.5_Setup.exe" class="btn btn-primary btn-lg" download id="heroDownloadBtn">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        <div class="btn-text-block">
+                            <span class="btn-main-text">Télécharger GEDA ERP (v2.5)</span>
+                            <span class="btn-sub-text">Setup Windows 64-bit · 85.6 Mo · Prêt à l'emploi</span>
+                        </div>
+                    </a>
+
+                    <a href="#tarifs" class="btn btn-secondary btn-lg">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14l6-6M9 8h6v6"/></svg>
+                        <span>Consulter l'Offre & Tarifs</span>
+                    </a>
+                </div>
+
+                <div class="hero-mirror-note">
+                    <span>Miroir de secours officiel :</span>
+                    <a href="https://github.com/youcef-boudjenah/GEDAERP/releases/download/v2.5/GEDA_ERP_v2.5_Setup.exe" target="_blank" rel="noopener">Lien direct GitHub CDN Release v2.5</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Demo Section -->
+        <section class="section section-demo" id="demo">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Aperçu Réel</span>
+                    <h2 class="section-title">Démonstration en vidéo : tour d'horizon rapide de GEDA ERP</h2>
+                    <p class="section-subtitle">
+                        Découvrez la réactivité de l'interface, la clarté des tableaux de bord financiers et l'efficacité des modules métiers en action.
+                    </p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-player-wrapper">
+                        <video id="gedaVideo" controls preload="metadata" poster="assets/img/video-cover.jpg">
+                            <source src="assets/media/GEDA_ERP_reel_rapide.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture vidéo HTML5.
+                        </video>
+                    </div>
+
+                    <div class="video-footer">
+                        <div class="video-feature">
+                            <span class="feature-num">01</span>
+                            <div>
+                                <h4>Navigation Fluide</h4>
+                                <p>Recherche universelle instantanée (Ctrl+K) et accès direct à vos pièces.</p>
+                            </div>
+                        </div>
+                        <div class="video-feature">
+                            <span class="feature-num">02</span>
+                            <div>
+                                <h4>Double Parapheur</h4>
+                                <p>Séparation des fonctions et circuits d'approbation sur les règlements sensibles.</p>
+                            </div>
+                        </div>
+                        <div class="video-feature">
+                            <span class="feature-num">03</span>
+                            <div>
+                                <h4>Conformité DGI</h4>
+                                <p>Édition automatisée de la déclaration fiscale mensuelle G50 prête à téléverser.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing & Modules Section -->
+        <section class="section section-pricing" id="tarifs">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Proposition Commerciale</span>
+                    <h2 class="section-title">Notre offre modulaire & Tarifs transparents</h2>
+                    <p class="section-subtitle">
+                        GEDA Solution vous propose son ERP modulaire, conçu pour les entreprises algériennes : plan comptable SCF, déclaration G50, 
+                        paie avec IRG, cartes Naftal, vente au camion et gestion de production. L'offre ci-dessous couvre la suite complète 
+                        (15 modules et le noyau d'administration), l'installation, la migration de vos données et la formation de vos équipes.
+                    </p>
+                </div>
+
+                <!-- Main Offer Highlight Banner -->
+                <div class="offer-highlight-card">
+                    <div class="offer-left">
+                        <div class="offer-tag">Pack Intégral Tout Compris (16 Modules)</div>
+                        <h3 class="offer-title">Licence à Vie (Perpétuelle)</h3>
+                        <p class="offer-desc">
+                            Acquisition définitive du progiciel pour l'ensemble de votre société. Pas de blocage mensuel.
+                            Installation sur votre infrastructure locale, migration de vos historiques et formation opérationnelle incluses.
+                        </p>
+                        <div class="offer-badges-list">
+                            <span class="tag-pill">✓ 15 Modules Métiers + Administration</span>
+                            <span class="tag-pill">✓ Installation sur site ou à distance</span>
+                            <span class="tag-pill">✓ Migration de vos données</span>
+                            <span class="tag-pill">✓ Formation de vos équipes</span>
+                        </div>
+                    </div>
+
+                    <div class="offer-right">
+                        <div class="price-box">
+                            <span class="price-catalog-strike">Prix catalogue : 2 590 000 DA</span>
+                            <div class="price-final-wrap">
+                                <span class="price-final-amount">1 650 000</span>
+                                <span class="price-final-currency">DZD</span>
+                            </div>
+                            <span class="price-discount-badge">Remise spéciale de -36%</span>
+                        </div>
+
+                        <div class="maintenance-box">
+                            <div class="maint-label">Redevance Annuelle (Dès la 2ème année) :</div>
+                            <div class="maint-price"><strong>100 000 DZD / an</strong></div>
+                            <p class="maint-desc">
+                                Comprend les mises à jour légales et fiscales (barème IRG, lois de finances), la téléassistance prioritaire et les correctifs techniques.
+                            </p>
+                        </div>
+
+                        <a href="#contact" class="btn btn-primary btn-block">
+                            Demander cette offre pour mon entreprise
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search & Filter Bar -->
+                <div class="catalog-controls" id="modules">
+                    <div class="catalog-search-wrap">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                        <input type="text" id="moduleSearchInput" placeholder="Rechercher un module (ex: SCF, G50, Naftal, IRG, Camion, Stock...)" aria-label="Recherche de module">
+                    </div>
+                    <div class="catalog-count" id="catalogCount">
+                        Affichage de 16 modules sur 16
+                    </div>
+                </div>
+
+                <!-- Comprehensive Modules Table -->
+                <div class="table-card">
+                    <div class="table-responsive">
+                        <table class="pricing-table" id="modulesTable">
+                            <thead>
+                                <tr>
+                                    <th class="col-num">N°</th>
+                                    <th class="col-module">Module & Fonctionnalités Clés</th>
+                                    <th class="col-price-cat">Prix Catalogue</th>
+                                    <th class="col-price-offer">Prix Offre</th>
+                                    <th class="col-discount">Remise</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">1</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Finance & Comptabilité</div>
+                                        <div class="module-features">Plan comptable SCF, écritures de journal, facturation clients et fournisseurs, trésorerie, rapprochements bancaires, déclaration G50.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">250 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">160 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-36 %</span></td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">2</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Finance & Trésorerie</div>
+                                        <div class="module-features">Portefeuille de chèques et traites, bordereaux de remise bancaire, relevés de comptes, parapheur électronique à double visa.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">150 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">95 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-37 %</span></td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">3</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Recouvrement & Crédit</div>
+                                        <div class="module-features">Suivi des impayés, balance âgée 30/60/90 j, plafonds de crédit, relances formalisées, promesses de règlement.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">120 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">75 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-38 %</span></td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">4</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Ventes & CRM</div>
+                                        <div class="module-features">Prospects, pipeline commercial, devis, commandes clients, bons de livraison, factures, suivi des encaissements.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">200 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">130 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-35 %</span></td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">5</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">CRM Prospection & Pipeline</div>
+                                        <div class="module-features">Fichier tiers 360°, relances à 15 jours, pipeline Kanban, carnet de contacts, campagnes marketing, reporting de tournée.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">120 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">75 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-38 %</span></td>
+                                </tr>
+                                <!-- Row 6 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">6</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">CRM Distribution & Ventes</div>
+                                        <div class="module-features">Order-to-Cash, vente directe au camion (Van Sales), comptoir Cash & Carry (POS), tournées, dépôts, litiges.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">250 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">160 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-36 %</span></td>
+                                </tr>
+                                <!-- Row 7 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">7</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Achats & Fournisseurs</div>
+                                        <div class="module-features">Répertoire fournisseurs, demandes d'achat, bons de commande, réceptions d'entrepôt, contrôle des factures.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">150 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">95 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-37 %</span></td>
+                                </tr>
+                                <!-- Row 8 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">8</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Stock & Entrepôts</div>
+                                        <div class="module-features">Articles, unités de mesure, multi-dépôts, mouvements, numéros de lots, inventaires, alertes de réapprovisionnement.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">200 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">130 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-35 %</span></td>
+                                </tr>
+                                <!-- Row 9 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">9</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">GPAO & Production</div>
+                                        <div class="module-features">Nomenclatures (BOM), ordres de fabrication, centres de charge, traçabilité, déstockage automatique des matières.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">300 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">190 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-37 %</span></td>
+                                </tr>
+                                <!-- Row 10 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">10</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Ressources Humaines (SIRH)</div>
+                                        <div class="module-features">Dossiers collaborateurs, contrats, paie IRG, gestion des congés, pointage des présences, notes de frais.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">250 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">160 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-36 %</span></td>
+                                </tr>
+                                <!-- Row 11 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">11</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Moyens Généraux & Flotte</div>
+                                        <div class="module-features">Flotte automobile, cartes Naftal, suivi de consommation, entretiens, inventaire du matériel, baux immobiliers.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">100 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">65 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-35 %</span></td>
+                                </tr>
+                                <!-- Row 12 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">12</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Service Après-Vente (SAV)</div>
+                                        <div class="module-features">Parc d'équipements, contrats de maintenance et SLA, tickets d'assistance, réclamations, bons d'intervention.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">130 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">85 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-35 %</span></td>
+                                </tr>
+                                <!-- Row 13 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">13</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Projets & Opérations</div>
+                                        <div class="module-features">Portefeuille de projets, planification des tâches, jalons, feuilles de temps, suivi de rentabilité.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">120 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">75 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-38 %</span></td>
+                                </tr>
+                                <!-- Row 14 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">14</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Documents & GED</div>
+                                        <div class="module-features">Archivage électronique sécurisé, gestion des versions, pièces jointes, circuits d'approbation.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">100 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">65 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-35 %</span></td>
+                                </tr>
+                                <!-- Row 15 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">15</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Rapports & Décisionnel</div>
+                                        <div class="module-features">Tableaux de bord consolidés, suivi du chiffre d'affaires, trésorerie, exports Excel et PDF.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-old">150 000 DA</span></td>
+                                    <td class="col-price-offer"><span class="price-deal">90 000 DA</span></td>
+                                    <td class="col-discount"><span class="discount-pill">-40 %</span></td>
+                                </tr>
+                                <!-- Row 16 -->
+                                <tr>
+                                    <td class="col-num"><span class="num-badge">16</span></td>
+                                    <td class="col-module">
+                                        <div class="module-name">Administration Système & Sécurité</div>
+                                        <div class="module-features">Configuration société, succursales, utilisateurs, matrice des rôles (RBAC), journaux d'audit et sécurité.</div>
+                                    </td>
+                                    <td class="col-price-cat"><span class="price-included">Inclus</span></td>
+                                    <td class="col-price-offer"><span class="price-included">Inclus</span></td>
+                                    <td class="col-discount"><span class="discount-pill discount-free">Offert</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="total-row">
+                                    <td colspan="2" class="total-label">
+                                        <strong>Sous-total des 16 modules (Suite Intégrale Complète)</strong>
+                                    </td>
+                                    <td class="col-price-cat"><strong class="price-total-cat">2 590 000 DA</strong></td>
+                                    <td class="col-price-offer"><strong class="price-total-deal">1 650 000 DA</strong></td>
+                                    <td class="col-discount"><span class="discount-pill discount-pill-lg">-36 %</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation & Activation Guide Section -->
+        <section class="section section-install" id="installation">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Déploiement Simplifié</span>
+                    <h2 class="section-title">Comment installer et activer GEDA ERP en 4 étapes</h2>
+                    <p class="section-subtitle">
+                        Aucun terminal compliqué ni configuration obscure. L'installateur Windows et l'assistant de configuration embarqué prennent tout en charge.
+                    </p>
+                </div>
+
+                <div class="steps-grid">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-badge">Étape 01</span>
+                            <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        </div>
+                        <h3 class="step-title">Télécharger le Setup</h3>
+                        <p class="step-desc">
+                            Téléchargez l'installateur officiel Windows <code>GEDA_ERP_v2.5_Setup.exe</code>. Tout est inclus (serveur, moteur de base de données, bibliothèques).
+                        </p>
+                        <a href="assets/downloads/GEDA_ERP_v2.5_Setup.exe" class="btn btn-outline btn-sm" download>
+                            Télécharger l'EXE (85.6 Mo)
+                        </a>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-badge">Étape 02</span>
+                            <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3 class="step-title">Lancer l'Installation</h3>
+                        <p class="step-desc">
+                            Exécutez le fichier d'installation. Dès le premier lancement, l'assistant vous invite à choisir votre base (SQLite ou MySQL) et à créer votre compte administrateur.
+                        </p>
+                        <span class="step-info">0 donnée démo · Base propre pour votre société</span>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-badge">Étape 03</span>
+                            <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h3 class="step-title">Copier votre Identifiant (HWID)</h3>
+                        <p class="step-desc">
+                            Sur l'écran d'activation (<code>/license/activate/</code>), copiez votre code matériel machine unique (ex: <code>GEDA-4222-1F4A-F889-F252</code>).
+                        </p>
+                        <span class="step-info">Protection matérielle Node-Locked</span>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-badge">Étape 04</span>
+                            <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <h3 class="step-title">Recevoir votre Clé d'Activation</h3>
+                        <p class="step-desc">
+                            Transmettez votre identifiant à GEDA Solution par WhatsApp ou téléphone. Vous recevez immédiatement votre clé numérique signée pour débloquer votre ERP.
+                        </p>
+                        <a href="#contact" class="btn btn-primary btn-sm">
+                            Contacter l'Éditeur
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation & Downloads Center Section -->
+        <section class="section section-docs" id="documentation">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Documentation Officielle</span>
+                    <h2 class="section-title">Guides, manuels et ressources à télécharger</h2>
+                    <p class="section-subtitle">
+                        Accédez en libre téléchargement aux guides complets d'utilisation et fiches techniques de GEDA ERP.
+                    </p>
+                </div>
+
+                <div class="docs-grid">
+                    <!-- Doc 1: User Manual -->
+                    <div class="doc-card">
+                        <div class="doc-badge-type">Manuel Utilisateur PDF</div>
+                        <h3 class="doc-title">Guide d'Utilisation Complet GEDA ERP</h3>
+                        <p class="doc-desc">
+                            Manuel exhaustif de 80+ pages détaillant chaque écran, les écritures comptables SCF, la déclaration G50, 
+                            la gestion des stocks multi-dépôts et les procédures d'administration.
+                        </p>
+                        <div class="doc-meta">
+                            <span>Format : PDF</span>
+                            <span>Taille : 22.2 Mo</span>
+                            <span>Édition 2026</span>
+                        </div>
+                        <div class="doc-actions">
+                            <a href="assets/docs/GEDA_ERP_Guide_utilisation_complet.pdf" class="btn btn-secondary btn-sm" download>
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                                <span>Télécharger le Guide</span>
+                            </a>
+                            <a href="assets/docs/GEDA_ERP_Guide_utilisation_complet.pdf" target="_blank" class="btn btn-ghost btn-sm">
+                                Consulter en ligne →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doc 2: Mini-book -->
+                    <div class="doc-card">
+                        <div class="doc-badge-type">Présentation Commerciale PDF</div>
+                        <h3 class="doc-title">Mini-Book & Cahier des Charges Synthétique</h3>
+                        <p class="doc-desc">
+                            Synthèse commerciale présentant l'architecture globale, la cartographie des flux d'entreprise, 
+                            les cas d'usage métiers et les avantages concurrentiels pour décideurs.
+                        </p>
+                        <div class="doc-meta">
+                            <span>Format : PDF</span>
+                            <span>Taille : 5.2 Mo</span>
+                            <span>Synthèse Exécutive</span>
+                        </div>
+                        <div class="doc-actions">
+                            <a href="assets/docs/GEDA_ERP_mini_book.pdf" class="btn btn-secondary btn-sm" download>
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                                <span>Télécharger le Mini-Book</span>
+                            </a>
+                            <a href="assets/docs/GEDA_ERP_mini_book.pdf" target="_blank" class="btn btn-ghost btn-sm">
+                                Consulter en ligne →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doc 3: Setup Executable -->
+                    <div class="doc-card doc-card-featured">
+                        <div class="doc-badge-type doc-badge-featured">Logiciel Installable (EXE)</div>
+                        <h3 class="doc-title">Installateur Complet GEDA ERP (v2.5)</h3>
+                        <p class="doc-desc">
+                            Package autonome d'installation pour Windows 10 & 11 (64-bit). Intègre le runtime d'exécution sécurisé, 
+                            la base SQLite vierge et l'assistant de configuration.
+                        </p>
+                        <div class="doc-meta">
+                            <span>Format : EXE Inno Setup</span>
+                            <span>Taille : 85.6 Mo</span>
+                            <span>Version : 2.5 Enterprise</span>
+                        </div>
+                        <div class="doc-actions">
+                            <a href="assets/downloads/GEDA_ERP_v2.5_Setup.exe" class="btn btn-primary btn-sm" download>
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                                <span>Télécharger l'Installateur</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Activation Section (Designed exactly from user's card reference) -->
+        <section class="section section-contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Nous Contacter</span>
+                    <h2 class="section-title">Activation de Licence, Démonstration & Devis</h2>
+                    <p class="section-subtitle">
+                        Pour obtenir votre clé d'activation sur mesure, planifier une démonstration en direct dans vos locaux ou finaliser votre bon de commande.
+                    </p>
+                </div>
+
+                <div class="editorial-cards-grid">
+
+                    <!-- Editorial Card 1: GEDA Solution -->
+                    <div class="editorial-card">
+                        <div class="card-left">
+                            <div class="card-lead-badge">Éditeur de Logiciel</div>
+                            <h3 class="card-company-name">GEDA Solution</h3>
+                            <p class="card-editorial-tagline">
+                                Éditeur de GEDA ERP · Votre partenaire en transformation digitale
+                            </p>
+                            <div class="card-brand-mark-wrap">
+                                <img src="assets/img/geda-solution-logo.png" alt="GEDA Solution" class="card-brand-img" onerror="this.src='assets/img/geda-mark.png'">
+                            </div>
+                        </div>
+
+                        <div class="card-right">
+                            <div class="contact-row">
+                                <span class="contact-label">TÉLÉPHONE</span>
+                                <a href="tel:+213559905367" class="contact-value highlight">+213 559 90 53 67</a>
+                            </div>
+
+                            <div class="contact-row">
+                                <span class="contact-label">EMAIL</span>
+                                <a href="mailto:solutiongeda@gmail.com" class="contact-value">solutiongeda@gmail.com</a>
+                            </div>
+
+                            <div class="contact-row">
+                                <span class="contact-label">WHATSAPP</span>
+                                <a href="https://wa.me/213559905367?text=Bonjour%20GEDA%20Solution,%20je%20souhaite%20activer%20une%20licence%20GEDA%20ERP." target="_blank" rel="noopener" class="contact-value whatsapp-link">
+                                    Discuter sur WhatsApp (+213 559 90 53 67) →
+                                </a>
+                            </div>
+
+                            <div class="card-action-bar">
+                                <a href="https://wa.me/213559905367?text=Bonjour,%20voici%20mon%20HWID%20pour%20activation%20GEDA%20ERP%20:" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
+                                    Envoyer mon code HWID pour activation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Editorial Card 2: Youcef Boudjenah -->
+                    <div class="editorial-card">
+                        <div class="card-left">
+                            <div class="card-lead-badge">Concepteur & Architecte</div>
+                            <h3 class="card-person-name">Youcef Boudjenah</h3>
+                            <p class="card-editorial-tagline">
+                                Concepteur et développeur de GEDA ERP
+                            </p>
+                            <div class="card-social-links">
+                                <span class="card-status-dot"></span>
+                                <span>Disponible pour déploiement & intégration</span>
+                            </div>
+                        </div>
+
+                        <div class="card-right">
+                            <div class="contact-row">
+                                <span class="contact-label">TÉLÉPHONE</span>
+                                <a href="tel:+213542263201" class="contact-value highlight">+213 542 26 32 01</a>
+                            </div>
+
+                            <div class="contact-row">
+                                <span class="contact-label">EMAIL</span>
+                                <a href="mailto:boudjenahyoucef22@gmail.com" class="contact-value">boudjenahyoucef22@gmail.com</a>
+                            </div>
+
+                            <div class="contact-row">
+                                <span class="contact-label">LINKEDIN</span>
+                                <a href="https://www.linkedin.com/in/youcef-boudjenah/" target="_blank" rel="noopener" class="contact-value">
+                                    in/youcef-boudjenah
+                                </a>
+                            </div>
+
+                            <div class="contact-row">
+                                <span class="contact-label">FACEBOOK</span>
+                                <a href="https://www.facebook.com/youcef.boudjenah" target="_blank" rel="noopener" class="contact-value">
+                                    Youcef Boudjenah
+                                </a>
+                            </div>
+
+                            <div class="card-action-bar">
+                                <a href="https://wa.me/213542263201?text=Bonjour%20Youcef,%20je%20souhaite%20des%20renseignements%20sur%20GEDA%20ERP." target="_blank" rel="noopener" class="btn btn-secondary btn-sm btn-block">
+                                    Contacter Youcef sur WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/img/geda-solution-logo.png" alt="GEDA Solution" class="footer-logo" onerror="this.src='assets/img/geda-mark.png'">
+                    <p class="footer-tagline">
+                        GEDA ERP Enterprise — Le système d'information intégré pensé et développé pour les entreprises algériennes.
+                    </p>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#presentation">Présentation</a></li>
+                        <li><a href="#modules">Les 16 Modules</a></li>
+                        <li><a href="#tarifs">Offre & Tarifs</a></li>
+                        <li><a href="#demo">Démonstration</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="assets/downloads/GEDA_ERP_v2.5_Setup.exe" download>Installateur Windows (EXE)</a></li>
+                        <li><a href="assets/docs/GEDA_ERP_Guide_utilisation_complet.pdf" download>Guide Utilisateur (PDF)</a></li>
+                        <li><a href="assets/docs/GEDA_ERP_mini_book.pdf" download>Livre Blanc (PDF)</a></li>
+                        <li><a href="#installation">Guide d'activation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Contact Direct</h4>
+                    <ul>
+                        <li><a href="tel:+213559905367">+213 559 90 53 67</a></li>
+                        <li><a href="tel:+213542263201">+213 542 26 32 01</a></li>
+                        <li><a href="mailto:solutiongeda@gmail.com">solutiongeda@gmail.com</a></li>
+                        <li><a href="mailto:boudjenahyoucef22@gmail.com">boudjenahyoucef22@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 GEDA Solution · Youcef Boudjenah · Tous droits réservés.</p>
+                <p class="footer-tech">Développé avec rigueur et passion en Algérie · Version 2.5 Enterprise</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
